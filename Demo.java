@@ -1,16 +1,20 @@
-class Calculator{
-    public int add(int num1, int num2){
-        int r = num1 + num2;
-        return r;
+class Computer {
+    public void playMusic() {
+        System.out.println("Music playing...");
+    }
+
+    public String getPen(int cost) {
+        if (cost >= 10)
+            return "Pen";
+        return "Nothing";
     }
 }
 
 public class Demo {
-    public static void main(String a[]){
-        Calculator calc = new Calculator();
-
-        int result = calc.add(4,5);
-        System.out.println("Addition of two numbers: " + result);
-
+    public static void main(String a[]) {
+        Computer obj = new Computer();
+        obj.playMusic();
+        String str = obj.getPen(8);
+        System.out.println(str);
     }
 }
