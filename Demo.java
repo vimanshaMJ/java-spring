@@ -1,26 +1,32 @@
+class Student{
+    int rollno;
+    String name;
+    int marks;
+}
 
 public class Demo {
     public static void main(String a[]) {
-        int nums[][] = new int[3][4]; // multidimensional array
+        Student students[] = new Student[3];
 
-        int nums1[][] = new int[3][]; // jagged array, individually specified inner array sizes
-        nums1[0] = new int[3];
-        nums1[1] = new int[4];
-        nums1[2] = new int[2];
+        Student s1 = new Student();
+        s1.name = "John";
+        s1.rollno = 1;
+        s1.marks = 90;
 
+        Student s2 = new Student();
+        s2.name = "Doe";
+        s2.rollno = 2;
+        s2.marks = 80;
 
-        for(int i=0; i<3; i++) {
-            for(int j=0; j<4; j++) {
-                nums[i][j] = (int)(Math.random()*10);
-            }
-            
-        }
-        
-        for(int i=0; i<3; i++) {
-            for(int j=0; j<4; j++) {
-                System.out.print(nums[i][j] + " ");
-            }
-            System.out.println();
-        }
+        Student s3 = new Student();
+        s3.name = "Smith";
+        s3.rollno = 3;
+        s3.marks = 75;
+
+        students[0] = s1;
+        students[1] = s2;
+        students[2] = s3;
+
+        System.out.println(students[0].name + ": " + students[0].marks);
     }
 }
