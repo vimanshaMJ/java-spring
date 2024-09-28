@@ -27,6 +27,12 @@ public class Demo {
         students[1] = s2;
         students[2] = s3;
 
-        System.out.println(students[0].name + ": " + students[0].marks);
+        for (int i = 0; i < students.length; i++) {
+            System.out.println("Name: " + students[i].name + " Roll No: " + students[i].rollno + " Marks: " + students[i].marks);
+        }
+
+        for (Student s : students) {
+            System.out.println("Name: " + s.name + " Roll No: " + s.rollno + " Marks: " + s.marks);
+        } // enhanced for loop
     }
 }
