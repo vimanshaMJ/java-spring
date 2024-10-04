@@ -1,32 +1,32 @@
-class Mobile {
-    String brand;
-    int price;
-    static String name; // static variable
+class Human{
+    private int age;
+    private String name;
 
-    public Mobile() {
-        brand = "Samsung";
-        price = 200;
-        System.out.println("In constructor");
-    } // constructor
-
-    static {
-        name = "Phone";
-        System.out.println("In static block");
-    } // static block
-
-    public void show() {
-        System.out.println(brand + " : " + price + " : " + name);
+    public int getAge(){
+        return age;
     }
-}
+    public void setAge(int age){
+        this.age = age;
+    }
 
-public class Demo {
-    public static void main(String a[]) {
-        // Mobile obj1 = new Mobile();
-        // obj1.brand = "Apple";
-        // obj1.price = 500;
-        // Mobile.name = "Smart phone";
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    
 
-        // Mobile obj2 = new Mobile();
-        // if we dont create an object, static block and constructor will not be executed
+} // private variables - accessable only in this class. Only way to access is with the help of methods
+
+public class Demo{
+    public static void main(String a[]){
+
+        Human obj = new Human(); 
+        obj.setAge(23);
+        obj.setName("Vimansha");
+
+        System.out.println("Name: "+obj.getName());
+        System.out.println("Age: "+obj.getAge());
     }
 }
