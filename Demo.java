@@ -1,38 +1,32 @@
-class Student{
-    int rollno;
-    String name;
-    int marks;
+class Mobile {
+    String brand;
+    int price;
+    static String name; // static variable
+
+    public Mobile() {
+        brand = "Samsung";
+        price = 200;
+        System.out.println("In constructor");
+    } // constructor
+
+    static {
+        name = "Phone";
+        System.out.println("In static block");
+    } // static block
+
+    public void show() {
+        System.out.println(brand + " : " + price + " : " + name);
+    }
 }
 
 public class Demo {
     public static void main(String a[]) {
-        Student students[] = new Student[3];
+        // Mobile obj1 = new Mobile();
+        // obj1.brand = "Apple";
+        // obj1.price = 500;
+        // Mobile.name = "Smart phone";
 
-        Student s1 = new Student();
-        s1.name = "John";
-        s1.rollno = 1;
-        s1.marks = 90;
-
-        Student s2 = new Student();
-        s2.name = "Doe";
-        s2.rollno = 2;
-        s2.marks = 80;
-
-        Student s3 = new Student();
-        s3.name = "Smith";
-        s3.rollno = 3;
-        s3.marks = 75;
-
-        students[0] = s1;
-        students[1] = s2;
-        students[2] = s3;
-
-        for (int i = 0; i < students.length; i++) {
-            System.out.println("Name: " + students[i].name + " Roll No: " + students[i].rollno + " Marks: " + students[i].marks);
-        }
-
-        for (Student s : students) {
-            System.out.println("Name: " + s.name + " Roll No: " + s.rollno + " Marks: " + s.marks);
-        } // enhanced for loop
+        // Mobile obj2 = new Mobile();
+        // if we dont create an object, static block and constructor will not be executed
     }
 }
